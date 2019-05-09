@@ -1,4 +1,7 @@
-﻿using System;
+﻿// #define TEST_MODE
+#define NORMAL_MODE
+
+using System;
 
 namespace CompilerConstructionLearning
 {
@@ -8,6 +11,12 @@ namespace CompilerConstructionLearning
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+
+#if TEST_MODE
+            Exp1Test.TestMain();
+#endif
+
+#if NORMAL_MODE
             while (true)
             {
                 System.Console.Write("请选择实验编号(1-{0}):", ExpCount);
@@ -28,6 +37,7 @@ namespace CompilerConstructionLearning
                         break;
                 }
             }
+#endif
         }
     }
 }
