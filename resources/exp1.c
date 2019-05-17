@@ -16,7 +16,7 @@ int main()
         cerr << "open file fail\n";
         return EXIT_FAILURE;
         /*返回值EXIT_FAILURE（在cstdlib库中定义）,用于向操作系统报*
-		告打开文件失败*/
+    告打开文件失败*/
     }
     char ch;
     ch = ifile.get(); //进行读写操作
